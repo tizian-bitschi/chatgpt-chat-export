@@ -1,18 +1,26 @@
-# ChatGPT Chat-Export für Firefox
+# ChatGPT Chat Export for Firefox
 
-Exportiert die Textnachrichten des aktuell geöffneten Chats in eine lokale TXT-Datei. Während des Exports scrollt der Chat automatisch nach oben. Der Fortschritt erscheint direkt auf der Chatseite. Lasse den Chat-Tab bis zum Abschluss geöffnet und im Vordergrund. Die Datei wird erst nach Abschluss im Firefox-Downloadordner gespeichert. Der Export kann auf der Chatseite abgebrochen werden. Keine Chatdaten werden von der Erweiterung an einen Server gesendet.
+A Firefox extension that saves the text messages from the open ChatGPT conversation to a local TXT file.
 
-## Installation zum Testen
+The extension scrolls through the conversation and displays its progress on the page. Keep the ChatGPT tab open and in the foreground until the export finishes. You can cancel the export from the progress panel. The file is saved to your Firefox downloads only after the export completes. The extension does not send chat data to a server.
 
-1. In Firefox `about:debugging#/runtime/this-firefox` öffnen.
-2. „Temporäres Add-on laden“ wählen und in diesem Ordner die Datei `manifest.json` auswählen.
-3. Einen Chat auf https://chatgpt.com öffnen und warten, bis er geladen ist.
-4. Auf das Erweiterungssymbol und anschließend auf „Export starten“ klicken.
+## Install for testing
 
-Die temporäre Installation endet beim Schließen von Firefox. Für eine dauerhafte Installation ist eine von Mozilla signierte Erweiterung erforderlich.
+1. Open `about:debugging#/runtime/this-firefox` in Firefox.
+2. Select **Load Temporary Add-on** and choose `manifest.json` from this repository.
+3. Open a conversation on [ChatGPT](https://chatgpt.com) and wait for it to load.
+4. Select the extension icon, then choose **Export starten**. The extension interface is in German.
 
-## Grenzen
+Firefox removes the temporary installation when it closes. Permanent installation requires an extension signed by Mozilla.
 
-Der Export enthält Text aus dem sichtbaren Gesprächszweig. Bilder, Audio, Video und angehängte Dateien werden nicht eingebettet; erkannte Medien werden markiert. Formatierung, Tabellen, Formeln, Zitate und Links erscheinen als Seitentext und können anders aussehen. Andere Antwortvarianten und ausgeblendete Inhalte sind nicht enthalten. Die Erweiterung nutzt Merkmale der ChatGPT-Oberfläche, die sich ändern können. Prüfe bei wichtigen Chats das Ergebnis auf Vollständigkeit. Wenn der Chat nicht bis zum Anfang scrollen kann, bricht der Export ab.
+## Limitations
 
-Für einen umfassenden Kontoexport einschließlich weiterer Kontodaten bietet OpenAI einen eigenen Datenexport unter Einstellungen → Datenkontrollen an: https://help.openai.com/en/articles/7260999-exporting-your-chatgpt-history-and-data
+The export contains text from the visible conversation branch. Images, audio, video, and attachments are not embedded; detected media are marked in the text. Formatting, tables, equations, citations, and links are exported as displayed text and may look different. Other response variants and hidden content are not included.
+
+The extension depends on ChatGPT's page structure, which can change. Check important exports for completeness. The export stops without saving if it cannot reach the beginning of the conversation. A complete end-to-end Firefox test has not yet been performed.
+
+For a broader account export that includes additional account data, OpenAI provides its own [data export](https://help.openai.com/en/articles/7260999-exporting-your-chatgpt-history-and-data) under Settings → Data Controls.
+
+## License
+
+[MIT](LICENSE)
