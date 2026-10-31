@@ -1,9 +1,0 @@
-{
-  "manifest_version": 3,
-  "name": "ChatGPT Chat-Export",
-  "version": "1.2.0",
-  "description": "Exportiert die Textnachrichten des geöffneten ChatGPT-Chats.",
-  "permissions": ["activeTab", "scripting"],
-  "action": { "default_title": "Chat exportieren", "default_popup": "popup.html" },
-  "browser_specific_settings": { "gecko": { "id": "chat-export@example.invalid", "strict_min_version": "109.0" } }
-}

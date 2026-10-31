@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Chat-Export",
+  "version": "1.3.0",
+  "description": "Exportiert die Textnachrichten des geöffneten ChatGPT-Chats.",
+  "permissions": ["activeTab", "scripting"],
+  "action": { "default_title": "Chat exportieren", "default_popup": "popup.html" },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chatgpt-chat-export@tizian-bitschi.github.io",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["none"] }
+    },
+    "gecko_android": { "strict_min_version": "142.0" }
+  }
+}
