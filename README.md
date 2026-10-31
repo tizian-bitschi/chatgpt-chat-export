@@ -6,7 +6,11 @@ The extension scrolls through the conversation and displays its progress on the 
 
 ## Install
 
-A Mozilla-signed `.xpi` is required for permanent installation in Firefox. A signed package is not yet available. Once available, download it, open it in Firefox, and confirm the installation. The extension requires Firefox 140 or later on desktop.
+1. Download the signed XPI from the [latest release](https://github.com/tizian-bitschi/chatgpt-chat-export/releases/latest).
+2. In Firefox, open `about:addons`, select the gear icon, and choose **Install Add-on From File**.
+3. Select the downloaded XPI and confirm the installation.
+
+The extension is signed by Mozilla for self-distribution and is not listed on Mozilla Add-ons. It requires Firefox 140 or later on desktop.
 
 To test the source temporarily:
 
@@ -33,7 +37,7 @@ The ZIP in `web-ext-artifacts/` is an unsigned submission package, not a permane
 npm run sign
 ```
 
-Mozilla validates the submission and returns the signed XPI in `web-ext-artifacts/` if it approves it. See [Mozilla's signing guide](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/#sign-your-extension-for-self-distribution). Signing and permanent installation have not yet been verified.
+Mozilla validates the submission and returns the signed XPI in `web-ext-artifacts/` if it approves it. See [Mozilla's signing guide](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/#sign-your-extension-for-self-distribution). The installation flow has not yet been tested end to end.
 
 ## Limitations
 
