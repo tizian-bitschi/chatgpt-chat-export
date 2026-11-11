@@ -40,7 +40,7 @@
       const id = node.getAttribute("data-message-id") || node.getAttribute("data-chatgpt-search-message-ids")?.trim().split(/\s+/)[0] || node.closest("[data-turn-id]")?.getAttribute("data-turn-id");
       if (!id) throw new Error("Nachrichten können nicht eindeutig erkannt werden. Die Oberfläche von ChatGPT hat sich möglicherweise geändert.");
       const content = node.querySelector("[data-user-message-bubble], [data-chatgpt-selection-message-id]") || node;
-      const text = content.innerText.trim();
+      const text = (role === "user" ? content.querySelector("[data-search-result-target]") || content : content).innerText.trim();
       const media = node.querySelector("img, video, audio, [data-testid*='attachment'], [data-testid*='file']") ? "\n[Medium oder Anhang: Datei nicht im Export enthalten]" : "";
       if (!text && !media) continue;
       entries.set(id, `${role === "user" ? "Du" : "ChatGPT"}:\n${text}${media}`);

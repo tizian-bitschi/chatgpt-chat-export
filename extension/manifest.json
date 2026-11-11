@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ChatGPT Chat-Export",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Exportiert die Textnachrichten des geöffneten ChatGPT-Chats.",
   "permissions": ["activeTab", "scripting"],
   "action": { "default_title": "Chat exportieren", "default_popup": "popup.html" },
